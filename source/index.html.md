@@ -9,7 +9,7 @@ language_tabs: # must be one of https://git.io/vQNgJ
 
 toc_footers:
   - <a href='#'>Sign Up for a Developer Key</a>
-  - <a href='https://github.com/lord/slate'>Documentation Powered by Slate</a>
+  - Powered by SlateDocs
 
 includes:
   - errors
@@ -19,11 +19,13 @@ search: true
 
 # Introduction
 
-Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
+Welcome to Bytemine.io's API Hub. You can use our API to access API endpoints and our own signals, which can get information on Fundamentals of a Ticker, Historical Data, Pre-Processed Signals and more from our database.
 
-We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
+Currently, we have language bindings in only Shell. However, you can easily translate this to whichever platform/language you are using as these are just simple API calls. You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
 
-This example API documentation page was created with [Slate](https://github.com/lord/slate). Feel free to edit it and use it as a base for your own API's documentation.
+We offer compelling data services for a highly competitive price, if you decide to switch to one of our premium plans. On top of that you get access to the Trader's platform as well. 
+
+If you have any questions or want to raise a concern/query, please drop in a mail at hello@bytemine.io. We'll try our best to answer your queries within 24 working hours.
 
 # Authentication
 

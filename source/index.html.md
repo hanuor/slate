@@ -121,7 +121,7 @@ You can get Candlestick Patterns from our API endpoints. This can be achieved us
 
 ### HTTP Request
 
-`GET https://bytemine.io/api/checkForCandlesticks/{api_key}/{ticker}`
+`GET https://bytemine.io/api/checkForCandlesticks/{api_key}/{ticker}/{timeframe}`
 
 ### Query Parameters
 
@@ -129,12 +129,18 @@ Parameter | Default | Description
 --------- | ------- | -----------
 api_key | true | API Key is required for authentication.
 ticker | true | A ticker/symbol is needed for the appropriate candlestick pattern to be returned.
+timeframe | true | Only one Timeframe out of these - 1m/2m/5m/15m/30m/60m/90m/1d/5d/1wk/1mo 
 
 <aside class="warning">
-Remember to add atleast <strong>1 Min Delay</strong> if you're making repeated requests.
+1. Remember to add atleast <strong>1 Min Delay</strong> if you're making repeated requests.<br>
+2. Timeframes should be in string format. Checkout the example below.
 </aside>
 
-## Get a Specific Kitten
+#### Example HTTP Request
+
+`GET https://bytemine.io/api/checkForCandlesticks/a3ewrdssq#@11D/AAPL/5m`
+
+## Trends
 
 ```ruby
 require 'kittn'
@@ -174,13 +180,12 @@ let max = api.kittens.get(2);
 }
 ```
 
-This endpoint retrieves a specific kitten.
+Trends can be classified into two categories - **Bullish** and **Bearish**. This can be achieved using Long Polling. However, make sure to not call our Endpoints without adding atleast a **1 Min Delay**.
 
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
 
 ### HTTP Request
 
-`GET http://example.com/kittens/<ID>`
+`GET https://bytemine.io/api/getTickerTrend/{api_key}/{ticker}`
 
 ### URL Parameters
 
@@ -238,4 +243,3 @@ Parameter | Description
 --------- | -----------
 ID | The ID of the kitten to delete
 
-#Trends

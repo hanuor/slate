@@ -60,13 +60,13 @@ To use the API you have to have an API key. You can get an API key from our [dev
 
 The API key should be included in all API requests to the server in a header that looks like the following:
 
-`Authorization: meowmeowmeow`
+`Authorization: YOUR_API_KEY`
 
 <aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
+You must replace <code>YOUR_API_KEY</code> with your personal API key.
 </aside>
 
-# Kittens
+# Signals
 
 ## Get All Kittens
 
@@ -238,3 +238,4 @@ Parameter | Description
 --------- | -----------
 ID | The ID of the kitten to delete
 
+#Trends

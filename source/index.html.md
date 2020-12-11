@@ -132,11 +132,12 @@ ticker | true | A ticker/symbol is needed for the appropriate candlestick patter
 timeframe | true | Only one Timeframe out of these - 1m/2m/5m/15m/30m/60m/90m/1d/5d/1wk/1mo 
 
 <aside class="warning">
+<br>
 1. Remember to add atleast <strong>1 Min Delay</strong> if you're making repeated requests.<br>
 2. Timeframes should be in string format. Checkout the example below.
 </aside>
 
-#### Example HTTP Request
+### Example HTTP Request
 
 `GET https://bytemine.io/api/checkForCandlesticks/a3ewrdssq#@11D/AAPL/5m`
 

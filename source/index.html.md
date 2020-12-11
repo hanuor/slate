@@ -117,21 +117,21 @@ let kittens = api.kittens.get();
 ]
 ```
 
-You can get Candlestick Patterns from our API endpoints. This can be achieved using Long Polling. However, make sure to not call our Endpoints without adding atleast **1 Min Delay**.
+You can get Candlestick Patterns from our API endpoints. This can be achieved using Long Polling. However, make sure to not call our Endpoints without adding atleast a **1 Min Delay**.
 
 ### HTTP Request
 
-`GET http://example.com/api/kittens`
+`GET https://bytemine.io/api/checkForCandlesticks/{api_key}/{ticker}`
 
 ### Query Parameters
 
 Parameter | Default | Description
 --------- | ------- | -----------
-include_cats | false | If set to true, the result will also include cats.
-available | true | If set to false, the result will include kittens that have already been adopted.
+api_key | true | API Key is required for authentication.
+ticker | true | A ticker/symbol is needed for the appropriate candlestick pattern to be returned.
 
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
+<aside class="warning">
+Remember to add atleast <strong>1 Min Delay</strong> if you're making repeated requests.
 </aside>
 
 ## Get a Specific Kitten

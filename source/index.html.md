@@ -68,7 +68,7 @@ You must replace <code>YOUR_API_KEY</code> with your personal API key.
 
 # Signals
 
-## Get All Kittens
+## Candlestick Patterns
 
 ```ruby
 require 'kittn'
@@ -117,7 +117,7 @@ let kittens = api.kittens.get();
 ]
 ```
 
-This endpoint retrieves all kittens.
+You can get Candlestick Patterns from our API endpoints. This can be achieved using Long Polling. However, make sure to not call our Endpoints without adding atleast **1 Min Delay**.
 
 ### HTTP Request
 

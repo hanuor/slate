@@ -150,7 +150,7 @@ Trends can be classified into two categories - **Bullish** and **Bearish**. This
 
 ### URL Parameters
 
-Parameter | Description
+Parameter | Default | Description
 --------- | -----------
 api_key | true | API Key is required for authentication.
 ticker | true | A ticker/symbol is needed for the appropriate candlestick pattern to be returned.

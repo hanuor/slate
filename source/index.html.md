@@ -3,8 +3,6 @@ title: API Reference
 
 language_tabs: # must be one of https://git.io/vQNgJ
   - shell
-  - ruby
-  - python
   - javascript
 
 toc_footers:
@@ -71,7 +69,7 @@ You must replace <code>YOUR_API_KEY</code> with your personal API key.
 ## Candlestick Patterns
 
 ```shell
-curl "https://bytemine.io/api/checkForCandlesticks/{api_key}/TSLA/5m"
+curl https://bytemine.io/api/checkForCandlesticks/{api_key}/TSLA/5m
   
 ```
 
@@ -79,10 +77,8 @@ curl "https://bytemine.io/api/checkForCandlesticks/{api_key}/TSLA/5m"
 $.ajax({
         url: "https://bytemine.io/api/checkForCandlesticks/{api_key}/TSLA/5m",
         type: 'GET',
-        dataType: 'json', // added data type
-        success: function(res) {
-            console.log(res);
-            alert(res);
+        success: function(data) {
+            console.log(data);
         }
     });
 ```
@@ -127,34 +123,22 @@ timeframe | true | Only one Timeframe out of these - 1m/2m/5m/15m/30m/60m/90m/1d
 
 ### Example HTTP Request
 
-`GET https://bytemine.io/api/checkForCandlesticks/a3ewrdssq#@11D/AAPL/5m`
+`GET https://bytemine.io/api/checkForCandlesticks/5fe69c95ed70a9869d9f9af7d8400a6673bb9ces/AAPL/5m`
 
 ## Trends
 
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get(2)
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get(2)
-```
-
 ```shell
-curl "http://example.com/api/kittens/2"
-  -H "Authorization: meowmeowmeow"
+curl https://bytemine.io/api/getTickerTrend/{api_key}/TSLA/5m
 ```
 
 ```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-let max = api.kittens.get(2);
+$.ajax({
+        url: "https://bytemine.io/api/getTickerTrend/{api_key}/TSLA/5m",
+        type: 'GET',
+        success: function(data) {
+            console.log(data);
+        }
+    });
 ```
 
 > The above command returns JSON structured like this:
@@ -182,53 +166,4 @@ Parameter | Description
 --------- | -----------
 ID | The ID of the kitten to retrieve
 
-## Delete a Specific Kitten
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.delete(2)
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.delete(2)
-```
-
-```shell
-curl "http://example.com/api/kittens/2"
-  -X DELETE
-  -H "Authorization: meowmeowmeow"
-```
-
-```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-let max = api.kittens.delete(2);
-```
-
-> The above command returns JSON structured like this:
-
-```json
-{
-  "id": 2,
-  "deleted" : ":("
-}
-```
-
-This endpoint deletes a specific kitten.
-
-### HTTP Request
-
-`DELETE http://example.com/kittens/<ID>`
-
-### URL Parameters
-
-Parameter | Description
---------- | -----------
-ID | The ID of the kitten to delete
 

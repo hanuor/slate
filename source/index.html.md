@@ -45,7 +45,7 @@ api = kittn.authorize('meowmeowmeow')
 ```shell
 # With shell, you can just pass the correct header with each request
 curl "api_endpoint_here"
-  -H "Authorization: meowmeowmeow"
+
 ```
 
 ```javascript
@@ -70,51 +70,39 @@ You must replace <code>YOUR_API_KEY</code> with your personal API key.
 
 ## Candlestick Patterns
 
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get()
-```
-
 ```shell
-curl "http://example.com/api/kittens"
-  -H "Authorization: meowmeowmeow"
+curl "https://bytemine.io/api/checkForCandlesticks/{api_key}/TSLA/5m"
+  
 ```
 
 ```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
-let kittens = api.kittens.get();
+$.ajax({
+        url: "https://bytemine.io/api/checkForCandlesticks/{api_key}/TSLA/5m",
+        type: 'GET',
+        dataType: 'json', // added data type
+        success: function(res) {
+            console.log(res);
+            alert(res);
+        }
+    });
 ```
 
 > The above command returns JSON structured like this:
 
 ```json
-[
-  {
-    "id": 1,
-    "name": "Fluffums",
-    "breed": "calico",
-    "fluffiness": 6,
-    "cuteness": 7
-  },
-  {
-    "id": 2,
-    "name": "Max",
-    "breed": "unknown",
-    "fluffiness": 5,
-    "cuteness": 10
-  }
-]
+{
+   "success": true,
+   "data": [
+      {
+         "time": "2020-12-08 09:30",
+         "pattern": "Bearish Engulfing",
+         "close": 604.48,
+         "high": 654.32,
+         "open": 653.69,
+         "low": 588
+      }
+   ]
+}
 ```
 
 You can get Candlestick Patterns from our API endpoints. This can be achieved using Long Polling. However, make sure to not call our Endpoints without adding atleast a **1 Min Delay**.

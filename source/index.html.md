@@ -141,7 +141,7 @@ $.ajax({
 }
 ```
 
-Trends can be classified into two categories - **Bullish** and **Bearish**. This can be achieved using Long Polling. However, make sure to not call our Endpoints without adding atleast a **1 Min Delay**.
+Trends can be classified into three categories - **Bullish**, **Bearish**, **Neutral**. This can be achieved using Long Polling. However, make sure to not call our Endpoints without adding atleast a **1 Min Delay**.
 
 
 ### HTTP Request

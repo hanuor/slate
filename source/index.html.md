@@ -148,10 +148,11 @@ Trends can be classified into two categories - **Bullish** and **Bearish**. This
 
 `GET https://bytemine.io/api/getTickerTrend/{api_key}/{ticker}/{timeframe}`
 
-### URL Parameters
+
+### Query Parameters
 
 Parameter | Default | Description
---------- | -----------
+--------- | ------- | -----------
 api_key | true | API Key is required for authentication.
 ticker | true | A ticker/symbol is needed for the appropriate candlestick pattern to be returned.
 timeframe | true | Only one Timeframe out of these - 1m/2m/5m/15m/30m/60m/90m/1d/5d/1wk/1mo 

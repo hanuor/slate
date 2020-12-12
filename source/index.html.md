@@ -22,7 +22,7 @@ Currently, we have language bindings in only Shell. However, you can easily tran
 
 We offer compelling data services for a highly competitive price, if you decide to switch to one of our premium plans. On top of that you get access to the Trader's platform as well. 
 
-If you have any questions or want to raise a concern/query, please drop in a mail at hello@bytemine.io. We'll try our best to answer your queries within 24 working hours.
+If you have any questions or want to raise a concern/query, please drop in a mail at **hello@bytemine.io**. We'll try our best to answer your queries within 24 working hours.
 
 # Authentication
 

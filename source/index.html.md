@@ -26,42 +26,33 @@ If you have any questions or want to raise a concern/query, please drop in a mai
 
 # Authentication
 
-> To authorize, use this code:
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-```
+> No tricky authorization mechanisms. Authorization of the API key is essential for requesting data.
 
 ```shell
-# With shell, you can just pass the correct header with each request
-curl "api_endpoint_here"
+# With shell, you can just pass the correct API key with each request
+curl https://bytemine.io/api/checkForCandlesticks/{api_key}/...
 
 ```
 
 ```javascript
-const kittn = require('kittn');
-
-let api = kittn.authorize('meowmeowmeow');
+$.ajax({
+        url: "https://bytemine.io/api/checkForCandlesticks/{api_key}/...",
+        type: 'GET',
+        success: function(data) {
+            console.log(data);
+        }
+    });
 ```
 
-> Make sure to replace `meowmeowmeow` with your API key.
+> Make sure to replace `{api_key}` with your API key.
 
 To use the API you have to have an API key. You can get an API key from our [developer portal](https://bytemine.io/developers).
 
-The API key should be included in all API requests to the server in a header that looks like the following:
+**The API key should be included in all API requests to the server**
 
-`Authorization: YOUR_API_KEY`
 
 <aside class="notice">
-You must replace <code>YOUR_API_KEY</code> with your personal API key.
+You must replace <code>YOUR_API_KEY</code> or <code>{api_key}</code> with your personal API key.
 </aside>
 
 # Signals
@@ -128,12 +119,12 @@ timeframe | true | Only one Timeframe out of these - 1m/2m/5m/15m/30m/60m/90m/1d
 ## Trends
 
 ```shell
-curl https://bytemine.io/api/getTickerTrend/{api_key}/TSLA/5m
+curl https://bytemine.io/api/getTickerTrend/{api_key}/AMD/30m
 ```
 
 ```javascript
 $.ajax({
-        url: "https://bytemine.io/api/getTickerTrend/{api_key}/TSLA/5m",
+        url: "https://bytemine.io/api/getTickerTrend/{api_key}/AMD/30m",
         type: 'GET',
         success: function(data) {
             console.log(data);
@@ -145,11 +136,8 @@ $.ajax({
 
 ```json
 {
-  "id": 2,
-  "name": "Max",
-  "breed": "unknown",
-  "fluffiness": 5,
-  "cuteness": 10
+   "success": true,
+   "trend": "Bearish"
 }
 ```
 
@@ -158,12 +146,14 @@ Trends can be classified into two categories - **Bullish** and **Bearish**. This
 
 ### HTTP Request
 
-`GET https://bytemine.io/api/getTickerTrend/{api_key}/{ticker}`
+`GET https://bytemine.io/api/getTickerTrend/{api_key}/{ticker}/{timeframe}`
 
 ### URL Parameters
 
 Parameter | Description
 --------- | -----------
-ID | The ID of the kitten to retrieve
+api_key | true | API Key is required for authentication.
+ticker | true | A ticker/symbol is needed for the appropriate candlestick pattern to be returned.
+timeframe | true | Only one Timeframe out of these - 1m/2m/5m/15m/30m/60m/90m/1d/5d/1wk/1mo 
 
 

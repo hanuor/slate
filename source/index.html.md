@@ -30,13 +30,13 @@ If you have any questions or want to raise a concern/query, please drop in a mai
 
 ```shell
 # With shell, you can just pass the correct API key with each request
-curl https://bytemine.io/api/checkForCandlesticks/{api_key}/...
+curl https://bytemine.io/api/checkForCandlestick/{api_key}/...
 
 ```
 
 ```javascript
 $.ajax({
-        url: "https://bytemine.io/api/checkForCandlesticks/{api_key}/...",
+        url: "https://bytemine.io/api/checkForCandlestick/{api_key}/...",
         type: 'GET',
         success: function(data) {
             console.log(data);
@@ -60,13 +60,13 @@ You must replace <code>YOUR_API_KEY</code> or <code>{api_key}</code> with your p
 ## Candlestick Patterns
 
 ```shell
-curl https://bytemine.io/api/checkForCandlesticks/{api_key}/TSLA/5m
+curl https://bytemine.io/api/checkForCandlestick/{api_key}/TSLA/5m
   
 ```
 
 ```javascript
 $.ajax({
-        url: "https://bytemine.io/api/checkForCandlesticks/{api_key}/TSLA/5m",
+        url: "https://bytemine.io/api/checkForCandlestick/{api_key}/TSLA/5m",
         type: 'GET',
         success: function(data) {
             console.log(data);
@@ -96,7 +96,7 @@ You can get Candlestick Patterns from our API endpoints. This can be achieved us
 
 ### HTTP Request
 
-`GET https://bytemine.io/api/checkForCandlesticks/{api_key}/{ticker}/{timeframe}`
+`GET https://bytemine.io/api/checkForCandlestick/{api_key}/{ticker}/{timeframe}`
 
 ### Query Parameters
 
@@ -114,7 +114,7 @@ timeframe | true | Only one Timeframe out of these - 1m/2m/5m/15m/30m/60m/90m/1d
 
 ### Example HTTP Request
 
-`GET https://bytemine.io/api/checkForCandlesticks/5fe69c95ed70a9869d9f9af7d8400a6673bb9ces/AAPL/5m`
+`GET https://bytemine.io/api/checkForCandlestick/5fe69c95ed70a9869d9f9af7d8400a6673bb9ces/AAPL/5m`
 
 ## Trends
 

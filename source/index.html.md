@@ -6,7 +6,7 @@ language_tabs: # must be one of https://git.io/vQNgJ
   - javascript
 
 toc_footers:
-  - <a href='https://app.bytemine.io/pricing' target="_blank">Sign Up for a Developer Key</a>
+  - <a href='http://bytemine.io/pricing?utm_source=docs' target="_blank">Sign Up for a Developer Key</a>
 
 includes:
   - errors

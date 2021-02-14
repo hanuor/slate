@@ -163,7 +163,7 @@ timeframe | true | Only one Timeframe out of these - 1m/2m/5m/15m/30m/60m/90m/1d
 ## Company Details
 
 ```shell
-curl https://valhalla.bytemine.workers.dev/companyDetails/{api_key}/{ticker}
+curl https://valhalla.bytemine.workers.dev/companyDetails/{api_key}/ITC.NS
   
 ```
 
@@ -275,7 +275,7 @@ ticker | true | A ticker/symbol is needed for the appropriate candlestick patter
 ## Open High Low Close
 
 ```shell
-curl https://valhalla.bytemine.workers.dev/olhc/{api_key}/{ticker}/{timeframe}/{range}
+curl https://valhalla.bytemine.workers.dev/olhc/{api_key}/AMZN/15m/1d
   
 ```
 
@@ -526,7 +526,7 @@ Remember to add atleast <strong>1 Min Delay</strong> if you're making repeated r
 ## Company Summary
 
 ```shell
-curl https://valhalla.bytemine.workers.dev/summary/{api_key}/{ticker}
+curl https://valhalla.bytemine.workers.dev/summary/{api_key}/LSE.L
   
 ```
 

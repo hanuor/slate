@@ -158,7 +158,13 @@ ticker | true | A ticker/symbol is needed for the appropriate candlestick patter
 timeframe | true | Only one Timeframe out of these - 1m/2m/5m/15m/30m/60m/90m/1d/5d/1wk/1mo 
 
 
-# Stock Fundamentals
+# Stock Market Data
+
+## Country Abbreviations
+
+In some cases you might need country abbreviations to query the data. For example - if you want to find the list of stocks that a country has then you'd have to use country abbreviations.
+You can check the list of supported countries and their abbreviations from over [here](https://airtable.com/shrffQ8hRyl0LKAQH/tbl9lvQLZq9nryClu)
+
 
 ## Company Details
 
@@ -272,7 +278,7 @@ ticker | true | A ticker/symbol is needed for the appropriate candlestick patter
 `GET https://valhalla.bytemine.workers.dev/companyDetails/afdhesdf/TSLA`
 
 
-## Open High Low Close
+## Open High Low Close Volume
 
 ```shell
 curl https://valhalla.bytemine.workers.dev/olhc/{api_key}/AMZN/15m/1d

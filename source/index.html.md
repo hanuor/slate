@@ -165,7 +165,7 @@ timeframe | true | Only one Timeframe out of these - 1m/2m/5m/15m/30m/60m/90m/1d
 In some cases you might need country abbreviations to query the data. For example - if you want to find the list of stocks that a country has then you'd have to use country abbreviations.
 You can check the list of supported countries and their abbreviations from over here - <a href="https://airtable.com/shrffQ8hRyl0LKAQH/tbl9lvQLZq9nryClu" target="_blank">https://airtable.com/shrffQ8hRyl0LKAQH/tbl9lvQLZq9nryClu</a>.
 
-## Get List of Symbols from a Country
+## Get List of all tickers of a Country
 
 ```shell
 curl https://server1.bytemine.workers.dev/stocks/{api_key}/{country_abbreviation}/{offset}
@@ -623,11 +623,11 @@ $.ajax({
 }
 ```
 
-The API endpoint requires 3 parameters -> API key, country abbreviation and finally an offset.
-You can get the country abbreviation from the above step.
-For offset the default value that you should enter is 0. Since the data is picked up from our SQL database hence we require an offset param to determine which next set of data should we output.
-You can read about offset from <a href='https://www.w3schools.com/php/php_mysql_select_limit.asp' target="_blank">here</a>. 
-If you still have questions about this then please contact us at contact@bytemine.io.
+The API endpoint requires 3 parameters -> API key, country abbreviation and finally an offset.<br>
+You can get the country abbreviation from the above step.<br>
+For offset the default value that you should enter is 0. Since the data is picked up from our SQL database hence we require an offset param to determine which next set of data should we output.<br>
+You can read about offset from <a href='https://www.w3schools.com/php/php_mysql_select_limit.asp' target="_blank">here</a>. <br><br>
+If you still have questions about this then please contact us at contact@bytemine.io.<br>
 
 
 ## Company Details

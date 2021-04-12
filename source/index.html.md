@@ -629,6 +629,485 @@ For offset the default value that you should enter is 0. Since the data is picke
 You can read about offset from <a href='https://www.w3schools.com/php/php_mysql_select_limit.asp' target="_blank">here</a>. <br><br>
 If you still have questions about this then please contact us at contact@bytemine.io.<br>
 
+## Get Country's Most Active stocks
+
+```shell
+curl https://server1.bytemine.workers.dev/activestocks/{api_key}/{country_abbreviation}/{offset}
+  
+```
+
+```javascript
+$.ajax({
+        url: "https://server1.bytemine.workers.dev/stocks/{api_key}/cz/0",
+        type: 'GET',
+        success: function(data) {
+            console.log(data);
+        }
+    });
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+  "start": 0,
+  "totalCount": 38,
+  "tickersReturned": 38,
+  "data": {
+    "0": {
+      "tickerSymbol": "MONET.PR",
+      "open": 77.95,
+      "low": 77.6,
+      "high": 78.1,
+      "ltp": 78,
+      "volume": 1098092,
+      "dayChange": 0.34999847,
+      "dayChangePercent": 0.45073852,
+      "fiftyTwoWeekLow": 48.25,
+      "fiftyTwoWeekHigh": 84.3,
+      "marketCap": 39857999872
+    },
+    "2": {
+      "tickerSymbol": "CEZ.PR",
+      "open": 572,
+      "low": 571.5,
+      "high": 581,
+      "ltp": 581,
+      "volume": 280469,
+      "dayChange": 9.5,
+      "dayChangePercent": 1.6622921,
+      "fiftyTwoWeekLow": 433.5,
+      "fiftyTwoWeekHigh": 581,
+      "marketCap": 311110369280
+    },
+    "3": {
+      "tickerSymbol": "KOMB.PR",
+      "open": 680,
+      "low": 673.5,
+      "high": 683.5,
+      "ltp": 673.5,
+      "volume": 162851,
+      "dayChange": -4.5,
+      "dayChangePercent": -0.6637168,
+      "fiftyTwoWeekLow": 460,
+      "fiftyTwoWeekHigh": 725,
+      "marketCap": 127194513408
+    },
+    "4": {
+      "tickerSymbol": "AVST.PR",
+      "open": 143,
+      "low": 140.85,
+      "high": 143.15,
+      "ltp": 141.3,
+      "volume": 119147,
+      "dayChange": -1.699997,
+      "dayChangePercent": -1.188809,
+      "fiftyTwoWeekLow": 119.6,
+      "fiftyTwoWeekHigh": 177,
+      "marketCap": 141875101696
+    },
+    "5": {
+      "tickerSymbol": "ERBAG.PR",
+      "open": 756,
+      "low": 753,
+      "high": 764,
+      "ltp": 762.8,
+      "volume": 48484,
+      "dayChange": 6.799988,
+      "dayChangePercent": 0.8994693,
+      "fiftyTwoWeekLow": 440,
+      "fiftyTwoWeekHigh": 773.6,
+      "marketCap": 308809662464
+    },
+    "6": {
+      "tickerSymbol": "TELEC.PR",
+      "open": 261,
+      "low": 261,
+      "high": 264,
+      "ltp": 263.5,
+      "volume": 20722,
+      "dayChange": 3.5,
+      "dayChangePercent": 1.3461539,
+      "fiftyTwoWeekLow": 209,
+      "fiftyTwoWeekHigh": 264,
+      "marketCap": 79282405376
+    },
+    "7": {
+      "tickerSymbol": "STOCK.PR",
+      "open": 85,
+      "low": 85,
+      "high": 86.9,
+      "ltp": 85.7,
+      "volume": 8837,
+      "dayChange": 0.69999695,
+      "dayChangePercent": 0.8235258,
+      "fiftyTwoWeekLow": 50.4,
+      "fiftyTwoWeekHigh": 87.5,
+      "marketCap": 17163910144
+    },
+    "8": {
+      "tickerSymbol": "KOFOL.PR",
+      "open": 275,
+      "low": 273,
+      "high": 276,
+      "ltp": 274,
+      "volume": 8071,
+      "dayChange": 1,
+      "dayChangePercent": 0.36630037,
+      "fiftyTwoWeekLow": 212,
+      "fiftyTwoWeekHigh": 26900,
+      "marketCap": 6107980800
+    },
+    "9": {
+      "tickerSymbol": "PVT.PR",
+      "open": 1.99,
+      "low": 1.25,
+      "high": 1.99,
+      "ltp": 1.25,
+      "volume": 5511,
+      "dayChange": 0,
+      "dayChangePercent": 0,
+      "fiftyTwoWeekLow": 0.5,
+      "fiftyTwoWeekHigh": 1.99,
+      "marketCap": 1331337472
+    },
+    "10": {
+      "tickerSymbol": "PINK.PR",
+      "open": 1100,
+      "low": 1100,
+      "high": 1100,
+      "ltp": 1100,
+      "volume": 8230,
+      "dayChange": 0,
+      "dayChangePercent": 0,
+      "fiftyTwoWeekLow": 500,
+      "fiftyTwoWeekHigh": 1500,
+      "marketCap": 2750000128
+    },
+    "11": {
+      "tickerSymbol": "UQA.PR",
+      "open": 172.6,
+      "low": 172.6,
+      "high": 173.2,
+      "ltp": 173.2,
+      "volume": 2215,
+      "dayChange": 3.5,
+      "dayChangePercent": 2.0624633,
+      "fiftyTwoWeekLow": 130.8,
+      "fiftyTwoWeekHigh": 199.7,
+      "marketCap": 54379429888
+    },
+    "12": {
+      "tickerSymbol": "VIG.PR",
+      "open": 595,
+      "low": 595,
+      "high": 599.5,
+      "ltp": 599.5,
+      "volume": 1260,
+      "dayChange": 4.5,
+      "dayChangePercent": 0.75630254,
+      "fiftyTwoWeekLow": 469,
+      "fiftyTwoWeekHigh": 619,
+      "marketCap": 76730605568
+    },
+    "14": {
+      "tickerSymbol": "RDSA.PR",
+      "open": 436,
+      "low": 430,
+      "high": 439.2,
+      "ltp": 431,
+      "volume": 762,
+      "dayChange": -3.600006,
+      "dayChangePercent": -0.8283493,
+      "fiftyTwoWeekLow": 275,
+      "fiftyTwoWeekHigh": 509,
+      "marketCap": 3155898400768
+    },
+    "15": {
+      "tickerSymbol": "TABAK.PR",
+      "open": 14680,
+      "low": 14640,
+      "high": 14940,
+      "ltp": 14940,
+      "volume": 1377,
+      "dayChange": 340,
+      "dayChangePercent": 2.328767,
+      "fiftyTwoWeekLow": 13000,
+      "fiftyTwoWeekHigh": 15780,
+      "marketCap": 41016127488
+    },
+    "16": {
+      "tickerSymbol": "PRIUA.PR",
+      "open": 350,
+      "low": 350,
+      "high": 350,
+      "ltp": 350,
+      "volume": 100,
+      "dayChange": -2,
+      "dayChangePercent": -0.5681818,
+      "fiftyTwoWeekLow": 240,
+      "fiftyTwoWeekHigh": 358,
+      "marketCap": 1520648448
+    },
+    "17": {
+      "tickerSymbol": "NOKIA.PR",
+      "open": 92,
+      "low": 92,
+      "high": 92,
+      "ltp": 92,
+      "volume": 100,
+      "dayChange": 0,
+      "dayChangePercent": 0,
+      "fiftyTwoWeekLow": 76.82,
+      "fiftyTwoWeekHigh": 126.88,
+      "marketCap": 511416041472
+    },
+    "18": {
+      "tickerSymbol": "TOMA.PR",
+      "open": 1290,
+      "low": 1290,
+      "high": 1290,
+      "ltp": 1290,
+      "volume": 650,
+      "dayChange": 0,
+      "dayChangePercent": 0,
+      "fiftyTwoWeekLow": 1200,
+      "fiftyTwoWeekHigh": 1380,
+      "marketCap": 1718628352
+    },
+    "19": {
+      "tickerSymbol": "CZG.PR",
+      "open": 374,
+      "low": 371,
+      "high": 374,
+      "ltp": 374,
+      "volume": 6540,
+      "dayChange": 1,
+      "dayChangePercent": 0.26809654,
+      "fiftyTwoWeekLow": 280,
+      "fiftyTwoWeekHigh": 410,
+      "marketCap": 11159411712
+    },
+    "20": {
+      "tickerSymbol": "SABFG.PR",
+      "open": 10600,
+      "low": 10600,
+      "high": 10600,
+      "ltp": 10600,
+      "volume": 650,
+      "dayChange": 0,
+      "dayChangePercent": 0,
+      "fiftyTwoWeekLow": 10500,
+      "fiftyTwoWeekHigh": 10600,
+      "marketCap": 2731959296
+    },
+    "21": {
+      "tickerSymbol": "PEN.PR",
+      "open": 80,
+      "low": 78,
+      "high": 80,
+      "ltp": 78,
+      "volume": 400,
+      "dayChange": -1,
+      "dayChangePercent": -1.2658228,
+      "fiftyTwoWeekLow": 30,
+      "fiftyTwoWeekHigh": 115,
+      "marketCap": 3931433984
+    },
+    "22": {
+      "tickerSymbol": "PRAB.PR",
+      "open": 392,
+      "low": 392,
+      "high": 392,
+      "ltp": 392,
+      "volume": 500,
+      "dayChange": 0,
+      "dayChangePercent": 0,
+      "fiftyTwoWeekLow": 354,
+      "fiftyTwoWeekHigh": 402,
+      "marketCap": 392000000
+    },
+    "24": {
+      "tickerSymbol": "MOL.PR",
+      "open": 156.2,
+      "low": 156.2,
+      "high": 156.2,
+      "ltp": 156.2,
+      "volume": 200,
+      "dayChange": 0,
+      "dayChangePercent": 0,
+      "fiftyTwoWeekLow": 115,
+      "fiftyTwoWeekHigh": 176,
+      "marketCap": 117469896704
+    },
+    "25": {
+      "tickerSymbol": "JUVE.PR",
+      "open": 20.92,
+      "low": 20.67,
+      "high": 20.92,
+      "ltp": 20.67,
+      "volume": 174,
+      "dayChange": 0,
+      "dayChangePercent": 0,
+      "fiftyTwoWeekLow": 19.82,
+      "fiftyTwoWeekHigh": 29,
+      "marketCap": 26427215872
+    },
+    "26": {
+      "tickerSymbol": "DBK.PR",
+      "open": 273.1,
+      "low": 273.1,
+      "high": 273.1,
+      "ltp": 273.1,
+      "volume": 5,
+      "dayChange": 0,
+      "dayChangePercent": 0,
+      "fiftyTwoWeekLow": 153.4,
+      "fiftyTwoWeekHigh": 293.6,
+      "marketCap": 552189100032
+    },
+    "27": {
+      "tickerSymbol": "VER.PR",
+      "open": 1600,
+      "low": 1600,
+      "high": 1600,
+      "ltp": 1600,
+      "volume": 15,
+      "dayChange": 0,
+      "dayChangePercent": 0,
+      "fiftyTwoWeekLow": 923,
+      "fiftyTwoWeekHigh": 1832.5,
+      "marketCap": 556734414848
+    },
+    "28": {
+      "tickerSymbol": "BVB.PR",
+      "open": 130,
+      "low": 130,
+      "high": 130,
+      "ltp": 130,
+      "volume": 61,
+      "dayChange": -5,
+      "dayChangePercent": -3.7037036,
+      "fiftyTwoWeekLow": 119.4,
+      "fiftyTwoWeekHigh": 172.9,
+      "marketCap": 12028860416
+    },
+    "30": {
+      "tickerSymbol": "FACC.PR",
+      "open": 247,
+      "low": 247,
+      "high": 247,
+      "ltp": 247,
+      "volume": 30,
+      "dayChange": 0,
+      "dayChangePercent": 0,
+      "fiftyTwoWeekLow": 126.1,
+      "fiftyTwoWeekHigh": 276.4,
+      "marketCap": 11015656448
+    },
+    "31": {
+      "tickerSymbol": "EOAN.PR",
+      "open": 257.15,
+      "low": 257.15,
+      "high": 257.15,
+      "ltp": 257.15,
+      "volume": 300,
+      "dayChange": 1.6499939,
+      "dayChangePercent": 0.64579016,
+      "fiftyTwoWeekLow": 220,
+      "fiftyTwoWeekHigh": 275.05,
+      "marketCap": 675494494208
+    },
+    "32": {
+      "tickerSymbol": "VOLVB.PR",
+      "open": 535,
+      "low": 535,
+      "high": 535,
+      "ltp": 535,
+      "volume": 50,
+      "dayChange": 0,
+      "dayChangePercent": 0,
+      "fiftyTwoWeekLow": 290,
+      "fiftyTwoWeekHigh": 608,
+      "marketCap": 1089062043648
+    },
+    "33": {
+      "tickerSymbol": "PKO.PR",
+      "open": 186.5,
+      "low": 186.5,
+      "high": 186.5,
+      "ltp": 186.5,
+      "volume": 1,
+      "dayChange": 0,
+      "dayChangePercent": 0,
+      "fiftyTwoWeekLow": 110,
+      "fiftyTwoWeekHigh": 186.5,
+      "marketCap": 226819424256
+    },
+    "34": {
+      "tickerSymbol": "RBI.PR",
+      "open": 474.4,
+      "low": 474.4,
+      "high": 474.4,
+      "ltp": 474.4,
+      "volume": 230,
+      "dayChange": 0,
+      "dayChangePercent": 0,
+      "fiftyTwoWeekLow": 332,
+      "fiftyTwoWeekHigh": 494.6,
+      "marketCap": 157005529088
+    },
+    "35": {
+      "tickerSymbol": "PKN.PR",
+      "open": 368,
+      "low": 368,
+      "high": 368,
+      "ltp": 368,
+      "volume": 10,
+      "dayChange": 0,
+      "dayChangePercent": 0,
+      "fiftyTwoWeekLow": 225.9,
+      "fiftyTwoWeekHigh": 434.6,
+      "marketCap": 155653701632
+    },
+    "36": {
+      "tickerSymbol": "EFORU.PR",
+      "open": 103,
+      "low": 103,
+      "high": 103,
+      "ltp": 103,
+      "volume": 10,
+      "dayChange": 0,
+      "dayChangePercent": 0,
+      "fiftyTwoWeekLow": 92,
+      "fiftyTwoWeekHigh": 103,
+      "marketCap": 246338912
+    },
+    "37": {
+      "tickerSymbol": "OTP.PR",
+      "open": 978,
+      "low": 978,
+      "high": 978,
+      "ltp": 978,
+      "volume": 1,
+      "dayChange": 0,
+      "dayChangePercent": 0,
+      "fiftyTwoWeekLow": 651,
+      "fiftyTwoWeekHigh": 1003,
+      "marketCap": 264351432704
+    }
+  }
+}
+```
+
+The API endpoint requires 3 parameters -> API key, country abbreviation and finally an offset.<br>
+You can get the country abbreviation from the Step 2 (under Stock Market Data).<br>
+For offset the default value that you should enter is 0. Since the data is picked up from our SQL database hence we require an offset param to determine which next set of data should we output.<br>
+You can read about offset from <a href='https://www.w3schools.com/php/php_mysql_select_limit.asp' target="_blank">here</a>. <br><br>
+<b>At a time, the API returns a maximum of 200 tickers (if tickers in a country are greater 200).</b>
+If you still have questions about this then please contact us at contact@bytemine.io.<br>
+
+
 
 ## Company Details
 

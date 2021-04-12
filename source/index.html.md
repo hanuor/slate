@@ -638,7 +638,7 @@ curl https://server1.bytemine.workers.dev/activestocks/{api_key}/{country_abbrev
 
 ```javascript
 $.ajax({
-        url: "https://server1.bytemine.workers.dev/stocks/{api_key}/cz/0",
+        url: "https://server1.bytemine.workers.dev/activestocks/{api_key}/cz/0",
         type: 'GET',
         success: function(data) {
             console.log(data);
@@ -1108,6 +1108,95 @@ You can read about offset from <a href='https://www.w3schools.com/php/php_mysql_
 If you still have questions about this then please contact us at contact@bytemine.io.<br>
 
 
+## Get OLHCV Data of Tickers via single API Call
+
+```shell
+curl https://server1.bytemine.workers.dev/tickerList/{api_key}/{list_of_tickers}
+  
+```
+
+```javascript
+$.ajax({
+        url: "https://server1.bytemine.workers.dev/tickerList/{api_key}/ULVR.L%2CGSK.L%2CRB.L%2CBATS.L%2CAZN.L",
+        type: 'GET',
+        success: function(data) {
+            console.log(data);
+        }
+    });
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+  "0": {
+    "exchangeName": "LSE",
+    "percentChange": "0.11%",
+    "low": 4101.5,
+    "open": 4124.5,
+    "high": 4140,
+    "ltp": 4135.5,
+    "volume": 1682548,
+    "name": "Unilever PLC",
+    "symbol": "ULVR.L",
+    "type": "EQUITY"
+  },
+  "1": {
+    "exchangeName": "LSE",
+    "percentChange": "-1.67%",
+    "low": 1292.4,
+    "open": 1315,
+    "high": 1316.2,
+    "ltp": 1297.6,
+    "volume": 7105777,
+    "name": "GlaxoSmithKline plc",
+    "symbol": "GSK.L",
+    "type": "EQUITY"
+  },
+  "2": {
+    "exchangeName": "LSE",
+    "percentChange": "0.09%",
+    "low": 6464.855,
+    "open": 6506,
+    "high": 6556,
+    "ltp": 6498,
+    "volume": 1091046,
+    "name": "Reckitt Benckiser Group plc",
+    "symbol": "RB.L",
+    "type": "EQUITY"
+  },
+  "3": {
+    "exchangeName": "LSE",
+    "percentChange": "0.09%",
+    "low": 2764,
+    "open": 2780,
+    "high": 2805.5,
+    "ltp": 2788.5,
+    "volume": 2911611,
+    "name": "British American Tobacco p.l.c.",
+    "symbol": "BATS.L",
+    "type": "EQUITY"
+  },
+  "4": {
+    "exchangeName": "LSE",
+    "percentChange": "-0.85%",
+    "low": 7194,
+    "open": 7260,
+    "high": 7320,
+    "ltp": 7225,
+    "volume": 1359034,
+    "name": "AstraZeneca PLC",
+    "symbol": "AZN.L",
+    "type": "EQUITY"
+  }
+}
+```
+
+The API endpoint requires 2 parameters -> API key, and list of ticker separated by a 'comma'. Since you'd be passing this list in a URL you'd have to convert this comma separated string into ascii codes.<br>
+What this means is convert all commas into %2C. Please refer <a href="https://stackoverflow.com/a/6182386/4309170" target="_blank">here</a> for more details.<br>
+<br>
+Please check out the example by switching over to the Javascript tab to know more about how to format this request.<br>
+If you still have questions about this then please contact us at contact@bytemine.io.<br>
 
 ## Company Details
 
